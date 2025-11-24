@@ -14,7 +14,6 @@ function startGame() {
     timeDisplay.textContent = "--";
     clickable = false;
 
-    // Random time before turning green (1–3 seconds)
     timeout = setTimeout(() => {
         gameBox.style.background = "#2ecc71";
         gameBox.textContent = "CLICK!";
@@ -25,7 +24,7 @@ function startGame() {
 
 gameBox.addEventListener("click", () => {
     if (!clickable) {
-        // clicked too early
+
         clearTimeout(timeout);
         gameBox.textContent = "Too early!";
         gameBox.style.background = "#e74c3c";
